@@ -1,0 +1,21 @@
+function mesh = mesh_handler(N_elements)
+    cells = strcat('cells_',num2str(N_elements),'.dat');
+    nodes  = strcat('nodes_',num2str(N_elements),'.dat');
+    
+    cells = readtable("files/" + cells);
+    cells = table2array(cells);
+    nodes = readtable("files/" + nodes);
+    nodes = table2array(nodes);
+
+    %% Caras
+    
+    %% Areas
+
+    %% Centroides
+
+    %% Volumen
+
+    %% Conectividad
+
+
+end

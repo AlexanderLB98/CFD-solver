@@ -9,6 +9,7 @@ results = manager(w_0, t_0, []);
         w = propagator(w, t, problem, dt);
         t = t + dt;
         results = manager(w, t, results);
+        %i = i+1; 
     end
 end
 

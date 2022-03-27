@@ -17,10 +17,10 @@ manager = results_saver(1E-1);
 
 results_exp = simulator(w_0, t_0, problem, @fw_euler, dt_calculator, ...
     stopping_condition, manager);
-results_imp = simulator(w_0, t_0, problem, @bw_euler, dt_calculator, ...
-    stopping_condition, manager);
+%results_imp = simulator(w_0, t_0, problem, @bw_euler, dt_calculator, ...
+   % stopping_condition, manager);
 
 plot(results_exp(:,2), results_exp(:,3), '-k')
 hold on
-plot(results_imp(:,2), results_imp(:,3), '-k')
+%plot(results_imp(:,2), results_imp(:,3), '-k')
 % Ya está hecho, pero está com1plicado para hacer cambios
