@@ -9,10 +9,20 @@ a_y = -9.80665;
 w = w_0; % inicializo
 t = t_0;
 
+
 problem = @(w, t) fun_energy(w, t, -a_y);   % Fisica del problema
 stopping_condition = @stop_at_niter;        % Condicion de parada
-propagator = @fw_euler;           
+propagator = @bw_euler;           
 dt_calculator = constant_dt(1E-3);          % Clausura, funcion que devuelve funciones. 
 manager = results_saver(1E-3);
 
 
+
+
+
+%% Tareas
+% 1- Terminar el mallador. Lucas
+% 2- stopping_condition
+% 3- propagador
+% 4- fisica
+% 5- solver

@@ -13,9 +13,9 @@ function [new_w] = bw_euler(w, t, problem, dt)
 % Outputs: f_0: Derivada temporal evaluada en el instante t
 %          A_0: matriz jacobiana%                                                                  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    [f_0, ~, ~] = problem(w, t);
+    [f_0, A_0, df_dt_0] = problem(w, t);
     I = eye(size(A_0));
     B = (I - dt*A_0);
-    c = dt*(f_0 - A_0 * w + dt*df_dt_0);
+    c = w + dt*(f_0 - A_0 * w + dt*df_dt_0);
     new_w = linsolve(B,c); 
 end
